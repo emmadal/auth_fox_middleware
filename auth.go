@@ -8,8 +8,7 @@ import (
 
 var context *gin.Context
 
-func main() {
-
+func Authenticate() {
 	token := context.Request.Header.Get("Authorization")
 
 	if token == "" {
@@ -20,7 +19,7 @@ func main() {
 	}
 
 	//  validate the token and get user data from it
-	userID, err := verifyToken(token)
+	userID, err := VerifyToken(token)
 	if err != nil {
 		context.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{
 			"message": "Unauthorized",

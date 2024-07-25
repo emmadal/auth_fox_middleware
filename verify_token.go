@@ -8,7 +8,7 @@ import (
 )
 
 // verifyToken verify the given token to get its payload.
-func verifyToken(tokenString string) (int64, error) {
+func VerifyToken(tokenString string) (int64, error) {
 	// verify the signature of the token
 	parsedToken, err := jwt.Parse(tokenString, func(token *jwt.Token) (interface{}, error) {
 		_, ok := token.Method.(*jwt.SigningMethodHMAC)
