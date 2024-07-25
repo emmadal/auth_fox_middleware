@@ -6,9 +6,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-var context *gin.Context
-
-func Authenticate() {
+func Authenticate(context *gin.Context) {
 	token := context.Request.Header.Get("Authorization")
 
 	if token == "" {
