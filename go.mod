@@ -1,4 +1,4 @@
-module github.com/emmadal/fox/auth_middleware
+module github.com/emmadal/auth_fox_middleware
 
 go 1.22.5
 
